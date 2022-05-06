@@ -24,11 +24,9 @@ function saveTextOnFeedbackForm() {
 
 }
 
-
-
-
 function onFeedbackform(e) {
-  feedbackData[e.target.name] = e.target.value;
+  feedbackData.email = form.elements.email.value;
+  feedbackData.message = form.elements.message.value;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(feedbackData));
 }
 
